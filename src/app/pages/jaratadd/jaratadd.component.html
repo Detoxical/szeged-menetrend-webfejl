@@ -1,0 +1,41 @@
+<form [formGroup]="addJaratForm" (ngSubmit)="addJarat()" *ngIf="isUserAdmin">
+  <div>
+    <mat-form-field>
+      <mat-label for="id">Járat szám:</mat-label>
+      <input matInput type="text" formControlName="id"/>
+    </mat-form-field>
+  </div>
+  <div class="break"></div>
+  <div>
+    <mat-form-field>
+      <mat-label for="jarmu">Jármű típusa: </mat-label>
+      <input matInput type="text" formControlName="jarmu"/>
+    </mat-form-field>
+  </div>
+  <div class="break"></div>
+  <div>
+    <mat-form-field>
+      <mat-label for="noMegallok">Megállók száma: </mat-label>
+      <input matInput type="number" formControlName="noMegallok"/>
+    </mat-form-field>
+  </div>
+  <div class="break"></div>
+  <div>
+    <mat-form-field>
+      <mat-label for="start">Honnan: </mat-label>
+      <input matInput type="text" formControlName="start"/>
+    </mat-form-field>
+  </div>
+  <div class="break"></div>
+  <div>
+    <mat-form-field>
+      <mat-label for="end">Hova: </mat-label>
+      <input matInput type="text" formControlName="end"/>
+    </mat-form-field>
+  </div>
+  <div class="break"></div>
+  <div>
+    <button mat-raised-button color="primary" type="submit">Hozzáadás</button>
+  </div>
+</form>
+

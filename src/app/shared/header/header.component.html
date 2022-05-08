@@ -1,0 +1,23 @@
+<header class="header">
+  <div fxLayout="column" fxFlexAlign="center center">
+    <h1><b>Szeged közlekedési menetrendje</b></h1>
+    <h4>Jelentkezzen be vagy regisztráljon a menetrend megtekintéséhez!
+    <br/>
+    (Ez az input nem működik de mat autocomplete van hozzá)</h4>
+  </div>
+  <form class="width">
+    <mat-form-field appearance="fill">
+      <mat-label>Járat</mat-label>
+      <input type="text"
+             aria-label="Járat"
+             matInput
+             [formControl]="searchControl"
+             [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+</header>

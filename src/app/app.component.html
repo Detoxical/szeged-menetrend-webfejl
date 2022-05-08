@@ -1,0 +1,31 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <app-navbar (selectedPage)="changePage($event)" [currentPage]="page" *ngIf="page" (onCloseSidenav)="onClose($event, sidenav)"
+                [loggedInUser]="loggedInUser" (onLogout)="logout($event)"></app-navbar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div fxHide.gt-xs>
+        <button mat-icon-button (click)="onToggleSidenav(sidenav)">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div>
+        <mat-icon>directions_bus</mat-icon>
+        Menetrend
+      </div>
+      <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+          <li><button mat-button routerLink="/index">Főoldal</button></li>
+          <li *ngIf="(loggedInUser)"><button mat-button routerLink="/menetrend">Menetrend</button></li>
+          <li *ngIf="!(loggedInUser)"><button mat-button disabled routerLink="/menetrend">Menetrend</button></li>
+          <li *ngIf="!(loggedInUser)"><button mat-button routerLink="/login">Bejelentkezés</button></li>
+          <li *ngIf="(loggedInUser)"><button mat-button routerLink="/login" (click)="logout()">Kijelentkezés</button></li>
+          <li *ngIf="!(loggedInUser)"><button mat-button routerLink="/register">Regisztráció</button></li>
+        </ul>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

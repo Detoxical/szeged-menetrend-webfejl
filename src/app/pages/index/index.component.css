@@ -1,0 +1,12 @@
+.container {
+  margin: 5%;
+}
+button {
+  border-radius: .3em;
+  font-size: 1.5em;
+  padding: 40px 10px;
+  text-transform: uppercase;
+  background-color: #3f51b5;
+  color: azure;
+}
+

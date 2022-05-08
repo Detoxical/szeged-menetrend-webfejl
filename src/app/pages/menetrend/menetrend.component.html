@@ -1,0 +1,28 @@
+<div>
+  <h3>A járatok 10 percenként indulnak, óra 00-tól számolva. (pl.: 15:10, 15:20)</h3>
+</div>
+<table>
+  <tr>
+    <th>Járat</th>
+    <th>Jármű</th>
+    <th>Honnan</th>
+    <th>Hova</th>
+    <th>Megállók száma</th>
+    <th *ngIf="isUserAdmin">Action</th>
+  </tr>
+  <tr *ngFor="let jarat of jaratObject; let i = index;">
+    <td>{{jarat.id}}</td>
+    <td>{{jarat.jarmu}}</td>
+    <td>{{jarat.start}}</td>
+    <td>{{jarat.end}}</td>
+    <td>{{jarat.noMegallok}}</td>
+    <td *ngIf="isUserAdmin"><button mat-button color="warn" (click)="delJarat(jarat.id)">Törlés</button></td>
+  </tr>
+</table>
+<div *ngIf="isUserAdmin">
+  <button mat-raised-button color="primary" routerLink="/jaratadd">
+    Járat hozzáadása
+  </button>
+</div>
+
+

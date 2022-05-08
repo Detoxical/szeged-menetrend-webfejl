@@ -1,0 +1,11 @@
+.header {
+  height: 360px;
+  background: #3f51b5;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 5%;
+  color: azure;
+}
+
+

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "szeged-menetrend": {
+      "hosting": {
+        "szeged-menetrend": [
+          "szeged-menetrend"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "szeged-menetrend"
+  }
+}
