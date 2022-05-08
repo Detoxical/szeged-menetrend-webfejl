@@ -1,0 +1,1 @@
+# szeged-menetrend-webfejl
