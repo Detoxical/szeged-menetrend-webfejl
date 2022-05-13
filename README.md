@@ -1,5 +1,7 @@
 # szeged-menetrend-webfejl
 
+A COOSPACEN CSATOLT ENVIRONMENT MAPPÁT (vagy lehet hogy csak fájlokat csatoltam) AZ SRC MAPPÁBA KELL BELETENNI (ha nem mappában csatoltam őket akkor pedig src mappán belül egy environments mappát kell létrehozni és abba beletenni az environment.prod.ts és environment.ts fájlokat)
+
 ADMIN USER:
 test@gmail.com
 123456
